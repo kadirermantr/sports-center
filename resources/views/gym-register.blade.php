@@ -21,8 +21,6 @@
             <div class="row">
                 <div class="col-lg-8">
                     <div class="register-text">
-                        Spor salonunuz var ise bu sayfadan salonunuzun sitede yayınlanması için başvuru yapabilirsiniz.<br /><br /><br />
-
                         <form method="POST" action="{{ route('register') }}" class="register-form">
                             @csrf
                             <div class="row">

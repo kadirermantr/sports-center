@@ -100,7 +100,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="section-title">
-                    <h2>SINIFLAR</h2>
+                    <h2>SALONLAR</h2>
                 </div>
             </div>
         </div>

@@ -2,6 +2,11 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\GymController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\ChangePasswordController;
+use App\Http\Controllers\CityDistrictController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,31 +28,34 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
-Route::get('/hakkimizda', [App\Http\Controllers\HomeController::class, 'aboutUs'])->name('about-us');
-Route::get('/salonlar', [App\Http\Controllers\GymController::class, 'index'])->name('gyms');
-Route::get('/blog', [App\Http\Controllers\HomeController::class, 'blog'])->name('blog');
-Route::get('/blog-detay', [App\Http\Controllers\HomeController::class, 'blogDetails'])->name('blog-details');
-Route::get('/galeri', [App\Http\Controllers\HomeController::class, 'gallery'])->name('gallery');
-Route::get('/iletisim', [App\Http\Controllers\HomeController::class, 'contact'])->name('contact');
+Route::get('/', [HomeController::class, 'index'])->name('index');
+Route::get('/hakkimizda', [HomeController::class, 'aboutUs'])->name('about-us');
+Route::get('/salonlar', [GymController::class, 'index'])->name('gyms');
+Route::get('/blog', [HomeController::class, 'blog'])->name('blog');
+Route::get('/blog-detay', [HomeController::class, 'blogDetails'])->name('blog-details');
+Route::get('/galeri', [HomeController::class, 'gallery'])->name('gallery');
+Route::get('/iletisim', [HomeController::class, 'contact'])->name('contact');
 
 
 Route::group(['middleware' => 'guest'], function (){
-    Route::get('/login', [App\Http\Controllers\UserController::class, 'index'])->name('login');
-    Route::get('/register', [App\Http\Controllers\UserController::class, 'create'])->name('register');
-    Route::get('/forgot-password', [App\Http\Controllers\UserController::class, 'forgotPassword'])->name('forgot');
+    Route::get('/login', [UserController::class, 'index'])->name('login');
+    Route::get('/register', [UserController::class, 'create'])->name('register');
+    Route::get('/forgot-password', [UserController::class, 'forgotPassword'])->name('forgot');
 });
 
 Route::group(['middleware' => 'auth'], function (){
-    Route::resource('users', App\Http\Controllers\UserController::class);
-    Route::get('/account', [App\Http\Controllers\UserController::class, 'show'])->name('account');
-    Route::get('/delete-account', [App\Http\Controllers\UserController::class, 'showDeleteAccount'])->name('delete');
-    Route::post('/deleted-account', [App\Http\Controllers\UserController::class, 'destroy'])->name('destroy');
-    Route::get('/change-password', [App\Http\Controllers\ChangePasswordController::class, 'index'])->name('password');
-    Route::post('/change-password', [App\Http\Controllers\ChangePasswordController::class, 'store'])->name('change.password');
-    Route::get('/gym-register', [App\Http\Controllers\GymController::class, 'create'])->name('gym-register');
+    Route::resource('users', UserController::class);
+    Route::get('/account', [UserController::class, 'show'])->name('account');
+    Route::get('/delete-account', [UserController::class, 'showDeleteAccount'])->name('delete');
+    Route::post('/deleted-account', [UserController::class, 'destroy'])->name('destroy');
+    Route::get('/change-password', [ChangePasswordController::class, 'index'])->name('password');
+    Route::post('/change-password', [ChangePasswordController::class, 'store'])->name('change.password');
+    Route::get('/gym-register', [GymController::class, 'create'])->name('gym-register');
 });
 
 
-Route::get('city-district', [\App\Http\Controllers\CityDistrictController::class, 'index']);
-Route::post('get-districts-by-city', [\App\Http\Controllers\CityDistrictController::class, 'getDistrict']);
+Route::get('city-district', [CityDistrictController::class, 'index']);
+Route::post('get-districts-by-city', [CityDistrictController::class, 'getDistrict']);
+
+
+Route::get('/home', [HomeController::class, 'test'])->name('home');

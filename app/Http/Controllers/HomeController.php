@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Blog;
+use App\Models\Gym;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -23,9 +25,11 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
+
     public function index()
     {
-        return view('index');
+        $gyms = Gym::all();
+        return  view('index', compact('gyms'));
     }
 
     public function aboutUs()
@@ -40,7 +44,8 @@ class HomeController extends Controller
 
     public function blog()
     {
-        return view('blog');
+        $blogs = Blog::all();
+        return  view('blog', compact('blogs'));
     }
 
     public function blogDetails()
@@ -56,10 +61,5 @@ class HomeController extends Controller
     public function contact()
     {
         return view('contact');
-    }
-
-    public function ornek()
-    {
-        return view('ornek');
     }
 }
