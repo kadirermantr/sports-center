@@ -11,7 +11,7 @@ class CityDistrictController extends Controller
     public function index()
     {
         $data['cities'] = City::get(["name","id"]);
-        return view('city-district',$data);
+        return view('gym-register',$data);
     }
 
     public function getDistrict(Request $request)

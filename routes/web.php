@@ -51,11 +51,8 @@ Route::group(['middleware' => 'auth'], function (){
     Route::get('/change-password', [ChangePasswordController::class, 'index'])->name('password');
     Route::post('/change-password', [ChangePasswordController::class, 'store'])->name('change.password');
     Route::get('/gym-register', [GymController::class, 'create'])->name('gym-register');
+    Route::post('get-districts-by-city', [GymController::class, 'getDistrict']);
 });
-
-
-Route::get('city-district', [CityDistrictController::class, 'index']);
-Route::post('get-districts-by-city', [CityDistrictController::class, 'getDistrict']);
 
 
 Route::get('/home', [HomeController::class, 'test'])->name('home');

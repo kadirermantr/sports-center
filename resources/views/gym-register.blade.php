@@ -1,5 +1,9 @@
 @include('layouts.header')
 
+<meta name="csrf-token" content="content">
+<meta name="csrf-token" content="{{ csrf_token() }}">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 <!-- Breadcrumb Section Begin -->
 <section class="breadcrumb-section set-bg" data-setbg="img/breadcrumb/classes-breadcrumb.jpg">
     <div class="container">
@@ -28,12 +32,24 @@
                                     <input id="name" type="text" placeholder="Salon Adı" class="form-control @error('name') is-invalid @enderror" name="gym_name" value="{{ old('name') }}" required autocomplete="name">
                                 </div>
 
-                                <div class="col-lg-12">
-                                    <input id="city" type="text" placeholder="Şehir" class="form-control @error('city') is-invalid @enderror" name="surname" value="{{ old('city') }}" required autocomplete="city">
+                                <div class="col-lg-6">
+                                    <label for="country">Şehir</label>
+                                    <select class="form-control" id="city-dropdown">
+                                        <option value="">Şehir seçiniz</option>
+                                        @foreach ($cities as $city)
+                                            <option value="{{$city->id}}">
+                                                {{$city->name}}
+                                            </option>
+                                        @endforeach
+                                    </select>
                                 </div>
 
-                                <div class="col-lg-12">
-                                    <input id="district" type="text" placeholder="İlçe" class="form-control @error('district') is-invalid @enderror" name="nickname" value="{{ old('district') }}" required autocomplete="district">
+                                <div class="col-lg-6">
+                                    <label for="district">İlçe</label>
+                                    <select class="form-control" id="district-dropdown">
+                                        <option value=""></option>
+                                    </select>
+                                    <br />
                                 </div>
 
                                 <div class="col-lg-12">

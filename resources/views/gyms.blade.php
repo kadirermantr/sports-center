@@ -279,4 +279,27 @@
 </section>
 <!-- Footer Banner Section End -->
 
+<script>
+    $(document).ready(function() {
+        $('#city-dropdown').on('change', function() {
+            var city_id = this.value;
+            $("#district-dropdown").html('');
+            $.ajax({
+                url:"{{url('get-districts-by-city')}}",
+                type: "POST",
+                data: {
+                    city_id: city_id,
+                    _token: '{{csrf_token()}}'
+                },
+                dataType : 'json',
+                success: function(result){
+                    $('#district-dropdown').html('<option value="">İlçe seçiniz</option>');
+                    $.each(result.districts,function(key,value){
+                        $("#district-dropdown").append('<option value="'+value.id+'">'+value.name+'</option>');
+                    });
+                }
+            });
+        });
+    });
+</script>
 @include('layouts.footer')
