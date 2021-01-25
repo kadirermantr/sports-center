@@ -25,16 +25,16 @@
             <div class="row">
                 <div class="col-lg-8">
                     <div class="register-text">
-                        <form method="POST" action="{{ route('register') }}" class="register-form">
+                        <form method="post" action="{{ route('gym-save') }}" class="register-form" enctype="multipart/form-data">
                             @csrf
                             <div class="row">
                                 <div class="col-lg-12">
-                                    <input id="name" type="text" placeholder="Salon Adı" class="form-control @error('name') is-invalid @enderror" name="gym_name" value="{{ old('name') }}" required autocomplete="name">
+                                    <input id="name" type="text" placeholder="Salon Adı" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name">
                                 </div>
 
                                 <div class="col-lg-6">
                                     <label for="country">Şehir</label>
-                                    <select class="form-control" id="city-dropdown">
+                                    <select class="form-control" id="city-dropdown" required name="city_id">
                                         <option value="">Şehir seçiniz</option>
                                         @foreach ($cities as $city)
                                             <option value="{{$city->id}}">
@@ -46,7 +46,7 @@
 
                                 <div class="col-lg-6">
                                     <label for="district">İlçe</label>
-                                    <select class="form-control" id="district-dropdown">
+                                    <select class="form-control" id="district-dropdown" required name="district_id">
                                         <option value=""></option>
                                     </select>
                                     <br />
@@ -59,8 +59,8 @@
 
                                 <div class="col-lg-12">
                                     <label for="capacity">Kapasite</label>
-                                    <select class="form-control" id="capacity">
-                                        <option selected>Seçim yapınız</option>
+                                    <select class="form-control" id="capacity" name="capacity" required >
+                                        <option value="">Seçim yapınız</option>
                                         <option value="1">0-50</option>
                                         <option value="2">50-100</option>
                                         <option value="3">100+</option>
@@ -70,8 +70,8 @@
 
                                 <div class="col-lg-12">
                                     <label for="work_days">Çalışma Günleri</label>
-                                    <select class="form-control" id="work_days">
-                                        <option selected>Seçim yapınız</option>
+                                    <select class="form-control" id="work_days" name="work_days" required>
+                                        <option value="">Seçim yapınız</option>
                                         <option value="1">Her gün</option>
                                         <option value="2">Hafta içi her gün</option>
                                         <option value="3">Pazartesi-Cumartesi</option>
@@ -81,8 +81,8 @@
 
                                 <div class="col-lg-12">
                                     <label for="work_hours">Çalışma Saatleri</label>
-                                    <select class="form-control" id="work_hours">
-                                        <option selected>Seçim yapınız</option>
+                                    <select class="form-control" id="work_hours" name="work_hours" required >
+                                        <option value="">Seçim yapınız</option>
                                         <option value="1">10:00 - 18:00</option>
                                         <option value="2">10:00 - 19:00</option>
                                         <option value="3">10:00 - 20:00</option>
@@ -102,12 +102,12 @@
                         @endforeach
                     </div>
                 </div>
+
                 <div class="col-lg-4">
                     <div class="register-pic">
                         <img src="img/register-pic.jpg" alt="">
                     </div>
                 </div>
-
 
             </div>
         </div>

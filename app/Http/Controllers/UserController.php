@@ -23,11 +23,6 @@ class UserController extends Controller
         return view('auth.forgot-password');
     }
 
-    public function store(Request $request)
-    {
-        //
-    }
-
     public function show()
     {
         $id = Auth::user()->id;
@@ -42,11 +37,6 @@ class UserController extends Controller
         $users = User::find($id);
 
         return view('auth.account.delete-account', compact('users'));
-    }
-
-    public function edit($id)
-    {
-        //
     }
 
     public function update(Request $request, User $user)

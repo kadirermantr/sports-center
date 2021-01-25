@@ -50,8 +50,9 @@ Route::group(['middleware' => 'auth'], function (){
     Route::post('/deleted-account', [UserController::class, 'destroy'])->name('destroy');
     Route::get('/change-password', [ChangePasswordController::class, 'index'])->name('password');
     Route::post('/change-password', [ChangePasswordController::class, 'store'])->name('change.password');
-    Route::get('/gym-register', [GymController::class, 'create'])->name('gym-register');
+    Route::get('/gym-register', [GymController::class, 'show'])->name('gym-register');
     Route::post('get-districts-by-city', [GymController::class, 'getDistrict']);
+    Route::post('/save-gym', [GymController::class, 'save'])->name('gym-save');
 });
 
 
