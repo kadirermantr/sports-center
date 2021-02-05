@@ -25,7 +25,7 @@
             <div class="row">
                 <div class="col-lg-8">
                     <div class="register-text">
-                        <form method="post" action="{{ route('gym-save') }}" class="register-form" enctype="multipart/form-data">
+                        <form method="post" action="{{ route('save-application') }}" class="register-form" enctype="multipart/form-data">
                             @csrf
                             <div class="row">
                                 <div class="col-lg-12">
@@ -47,7 +47,7 @@
                                 <div class="col-lg-6">
                                     <label for="district">İlçe</label>
                                     <select class="form-control" id="district-dropdown" required name="district_id">
-                                        <option value=""></option>
+                                        <option value="">İlçe seçiniz</option>
                                     </select>
                                     <br />
                                 </div>
@@ -100,6 +100,12 @@
                                 {{ $error }}
                             </div>
                         @endforeach
+
+                        @if(session()->has('message'))
+                            <div class="alert alert-success">
+                                {{ session()->get('message') }}
+                            </div>
+                        @endif
                     </div>
                 </div>
 

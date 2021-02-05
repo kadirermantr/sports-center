@@ -20,15 +20,15 @@
         <div class="row">
             <div class="col-lg-4">
                 <div class="contact-info">
-                    <h4>Contacts Us</h4>
+                    <h4>Bize Ulaş</h4>
                     <div class="contact-address">
                         <div class="ca-widget">
                             <div class="cw-icon">
                                 <img src="img/icon/icon-1.png" alt="">
                             </div>
                             <div class="cw-text">
-                                <h5>Lokasyon</h5>
-                                <p>60-49 Road 11378 New York</p>
+                                <h5>Adres</h5>
+                                <p>Kadıköy / İstanbul</p>
                             </div>
                         </div>
                         <div class="ca-widget">
@@ -37,7 +37,7 @@
                             </div>
                             <div class="cw-text">
                                 <h5>Telefon</h5>
-                                <p>+65 11.188.888</p>
+                                <p>(123) 118 9999</p>
                             </div>
                         </div>
                         <div class="ca-widget">
@@ -46,7 +46,7 @@
                             </div>
                             <div class="cw-text">
                                 <h5>E-Posta</h5>
-                                <p>example@gmail.com</p>
+                                <p>iletisim@sportscenter.com</p>
                             </div>
                         </div>
                     </div>

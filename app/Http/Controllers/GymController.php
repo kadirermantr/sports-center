@@ -3,24 +3,41 @@
 namespace App\Http\Controllers;
 
 use App\Helpers\UploadPaths;
+use App\Models\Application;
 use App\Models\Gym;
 use App\Models\City;
 use App\Models\District;
-use App\Models\Product;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Symfony\Component\Console\Input\Input;
 
 class GymController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $gyms = Gym::all();
-        return  view('gyms', compact('gyms'));
+        $city_id = $request->get('city_id');
+
+        if ($city_id == null) {
+            $gyms = Gym::paginate(12);
+            $cities = City::get(["name","id"]);
+            $selected = 'Tüm şehirler';
+
+            return view('gyms', compact('gyms', 'cities', 'selected'));
+        }
+
+        else {
+            $gyms = Gym::all()->where('city_id', $city_id)->all();
+            $cities = City::get(["name","id"]);
+            $selected = City::find($city_id)->name;
+
+            return  view('gyms', compact('gyms','cities', 'selected'));
+        }
     }
 
     public function show()
     {
         $cities = City::get(["name","id"]);
-        return view('gym-register', compact('cities'));
+        return view('gym-application', compact('cities'));
     }
 
     public function save(Request $request) {
@@ -60,11 +77,6 @@ class GymController extends Controller
         $data = UploadPaths::uploadDataFromFile();
     }
 
-    public function create()
-    {
-
-    }
-
     public function getDistrict(Request $request)
     {
         $data['districts'] = District::where("city_id",$request->city_id)
@@ -72,14 +84,10 @@ class GymController extends Controller
         return response()->json($data);
     }
 
-    public function update(Request $request, $id)
+    public function destroy(Gym $gym, $id)
     {
-        //
-    }
-
-    public function destroy($id)
-    {
-        //
+        Gym::findOrFail($id)->delete();
+        return back();
     }
 
 }

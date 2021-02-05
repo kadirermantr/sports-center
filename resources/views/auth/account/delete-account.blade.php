@@ -17,7 +17,7 @@
 <!-- Gym Award Section Begin -->
 <section class="gym-award spad">
 
-    <form method="POST" action="{{route('destroy', $users->id)}}">
+    <form method="POST" action="{{route('destroy', $user->id)}}">
         @csrf
 
         <div class="container light-style flex-grow-1 container-p-y">
@@ -34,13 +34,15 @@
 
                     <div class="col-md-9">
                         <div class="tab-content">
-                            <div class="tab-pane fade active show" id="account-general">
+                            <div class="tab-pane fade active show">
 
                                 <hr class="border-light m-0">
 
                                 <div class="card-body">
-                                    Bu sayfadan hesabınızı kalıcı olarak silebilirsiniz.<br /><br />
-                                    Hesabınızı sildikten sonra yeniden etkinleştiremez veya hiçbir bilgiyi geri getiremezsiniz.
+                                    <p>
+                                        Bu sayfadan hesabınızı kalıcı olarak silebilirsiniz.<br /><br />
+                                        Hesabınızı sildikten sonra yeniden etkinleştiremez veya hiçbir bilgiyi geri getiremezsiniz.
+                                    </p>
                                 </div>
 
                             </div>
@@ -68,7 +70,7 @@
                                 </button>
                             </div>
                             <div class="modal-body">
-                                Hesabınızı silmek istediğinize emin misiniz?
+                                <p>Hesabınızı silmek istediğinize emin misiniz?</p>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">İptal</button>

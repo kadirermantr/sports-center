@@ -26,17 +26,17 @@ class UserController extends Controller
     public function show()
     {
         $id = Auth::user()->id;
-        $users = User::find($id);
+        $user = User::find($id);
 
-        return view('auth.account.general', compact('users'));
+        return view('auth.account.general', compact('user'));
     }
 
     public function showDeleteAccount()
     {
         $id = Auth::user()->id;
-        $users = User::find($id);
+        $user = User::find($id);
 
-        return view('auth.account.delete-account', compact('users'));
+        return view('auth.account.delete-account', compact('user'));
     }
 
     public function update(Request $request, User $user)

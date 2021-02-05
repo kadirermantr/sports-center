@@ -21,24 +21,25 @@
             <div class="col-lg-6">
                 <div class="about-pic">
                     <img src="img/about-pic.jpg" alt="">
-                    <a href="https://www.youtube.com/watch?v=SlPhMPnQ58k" class="play-btn video-popup">
+                    <a href="https://www.youtube.com/watch?v=ToRETlx8DlY" class="play-btn video-popup">
                         <img src="img/play.png" alt="">
                     </a>
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="about-text">
-                    <h2>Story About Us</h2>
-                    <p class="first-para">Lorem ipsum proin gravida nibh vel velit auctor aliquet. Aenean pretium
-                        sollicitudin, nascetur auci elit consequat ipsutissem niuis sed odio sit amet nibh vulputate
-                        cursus a amet.</p>
-                    <p class="second-para">Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, gravida
-                        quam semper libero sit amet.</p>
-                    <img src="img/about-signature.png" alt="">
-                    <div class="at-author">
-                        <h4>Lettie Chavez</h4>
-                        <span>CEO - Founder</span>
-                    </div>
+                    <h2>Hakkımızda</h2>
+                    <p class="first-para">
+                        Sports Center, spor salonlarını ve sporcuları bir arada toplamayı amaçlayan bir platformdur.
+                        Sporcular kendilerine en yakın ve en uygun spor salonlarını görüntüleyebildiği gibi,
+                        spor salonu sahipleri de başvuru yaparak spor salonlarını ekleyebilmektedir.
+                    </p>
+
+                    <br />
+
+                    <p class="second-para">
+                        Eğer spor salonunuz var ise ve salonunuzu yayınlamak istiyorsanız <a href="/gym-application">başvuru</a> sayfasından başvuruda bulunabilirsiniz.
+                    </p>
                 </div>
             </div>
         </div>
@@ -54,20 +55,19 @@
                 <div class="about-counter-text">
                     <div class="single-counter">
                         <h1 class="counter-num count">98</h1>
-                        <p>Programs</p>
+                        <p>Program</p>
                     </div>
                     <div class="single-counter">
                         <h1 class="counter-num count">14</h1>
-                        <p>Centers</p>
+                        <p>Salon</p>
                     </div>
                     <div class="single-counter">
                         <h1 class="counter-num count">50</h1>
-                        <span>k+</span>
-                        <p>Members</p>
+                        <p>Üye</p>
                     </div>
                     <div class="single-counter">
                         <h1 class="counter-num count">34</h1>
-                        <p>Coaches</p>
+                        <p>Eğitmen</p>
                     </div>
                 </div>
             </div>
@@ -82,13 +82,14 @@
         <div class="row">
             <div class="col-lg-8">
                 <div class="award-text">
-                    <h2>Best gym award</h2>
-                    <p>Lorem ipsum proin gravida nibh vel velit auctor aliquet. Aenean pretium sollicitudin,
-                        nascetur auci elit consequat ipsutissem niuis sed odio sit amet nibh vulputate cursus a
-                        amet.</p>
-                    <p>Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, gravida quam semper libero
-                        sit amet. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, gravida quam
-                        semper libero sit amet.</p>
+                    <h2>En İyi Salon Ödülü</h2>
+                    <p>
+                        Her ay sporcular tarafından en beğenilen spor salonları ödüllendirilmektedir. Değerlendirilme yorum, görüntülenme ve tercih edilmeye göre yapılmaktadır. Bu sayede spor salonları kendilerini daha geniş kitlelere duyurabilmektedir.
+                    </p>
+                    <br />
+                    <p>
+                        Sizinde bir spor salonunuz var ise hemen kayıt olarak daha geniş kitlelere ulaşabilirsiniz.
+                    </p>
                 </div>
             </div>
             <div class="col-lg-4">
@@ -105,10 +106,11 @@
         <div class="row">
             <div class="col-lg-6">
                 <div class="banner-text">
-                    <h2>Get training today</h2>
-                    <p>Gimply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                        industry’s standard.</p>
-                    <a href="#" class="primary-btn banner-btn">Contact Now</a>
+                    <h2>Şimdi spora başlayın</h2>
+                    <p>
+                        Hedefiniz her ne olursa olsun daha sağlıklı bir vücuda sahip olmak için sporu bir hobi haline getirmelisiniz.
+                    </p>
+                    <a href="/register" class="primary-btn banner-btn">Kaydol</a>
                 </div>
             </div>
             <div class="col-lg-5">
@@ -125,7 +127,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="section-title">
-                    <h2>EXPERT TRAINERS</h2>
+                    <h2>UZMAN EĞİTMENLER</h2>
                 </div>
             </div>
         </div>
@@ -135,7 +137,7 @@
                     <img src="img/trainer/about-trainer-1.jpg" alt="">
                     <div class="trainer-text">
                         <h5>Patrick Cortez</h5>
-                        <span>Leader</span>
+                        <span>Lider</span>
                         <p>non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
                             voluptatem.</p>
                         <div class="trainer-social">
@@ -152,7 +154,7 @@
                     <img src="img/trainer/about-trainer-2.jpg" alt="">
                     <div class="trainer-text">
                         <h5>Gregory Powers</h5>
-                        <span>Gym coach</span>
+                        <span>Spor Koçu</span>
                         <p>non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
                             voluptatem.</p>
                         <div class="trainer-social">
@@ -169,7 +171,7 @@
                     <img src="img/trainer/about-trainer-3.jpg" alt="">
                     <div class="trainer-text">
                         <h5>Walter Wagner</h5>
-                        <span>Dance trainer</span>
+                        <span>Dans Eğitmeni</span>
                         <p>non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
                             voluptatem.</p>
                         <div class="trainer-social">
@@ -192,18 +194,18 @@
         <div class="row">
             <div class="col-lg-6">
                 <div class="footer-banner-item set-bg" data-setbg="img/footer-banner/footer-banner-1.jpg">
-                    <span>New member</span>
-                    <h2>7 days for free</h2>
-                    <p>Complete the training sessions with us, surely you will be happy</p>
-                    <a href="#" class="primary-btn">Get Started</a>
+                    <span>Yeni Üyelik</span>
+                    <h2>7 gün ücretsiz</h2>
+                    <p>Eğitimlerinizi bizimle tamamlayın ve güzel sonuçlara ulaşın.</p>
+                    <a href="/register" class="primary-btn">Aramıza katıl!</a>
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="footer-banner-item set-bg" data-setbg="img/footer-banner/footer-banner-2.jpg">
-                    <span>contact us</span>
-                    <h2>09 746 204</h2>
-                    <p>If you trust us on your journey they dark sex does not disappoint you!</p>
-                    <a href="#" class="primary-btn">Get Started</a>
+                    <span>İletişime Geç</span>
+                    <h2>(123) 118 9999</h2>
+                    <p>Bu yolculukta bizimle hareket ederek daha profosyonel ilerleyebilirsiniz!</p>
+                    <a href="/register" class="primary-btn">Aramıza katıl!</a>
                 </div>
             </div>
         </div>

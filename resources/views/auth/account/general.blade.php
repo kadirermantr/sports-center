@@ -17,7 +17,7 @@
 <!-- Gym Award Section Begin -->
 <section class="gym-award spad">
 
-    <form method="POST" action="{{route('users.update', $users->id)}}">
+    <form method="POST" action="{{route('users.update', $user->id)}}">
         @csrf
         @method('PUT')
 
@@ -35,29 +35,29 @@
 
                     <div class="col-md-9">
                         <div class="tab-content">
-                            <div class="tab-pane fade active show" id="account-general">
+                            <div class="tab-pane fade active show">
 
                                 <hr class="border-light m-0">
 
                                 <div class="card-body">
                                     <div class="form-group">
                                         <label class="form-label">Ad</label>
-                                        <input name="name" type="text" class="form-control mb-1" value="{{$users->name}}" required>
+                                        <input name="name" type="text" class="form-control mb-1" value="{{$user->name}}" required>
                                     </div>
 
                                     <div class="form-group">
                                         <label class="form-label">Soyad</label>
-                                        <input name="surname" type="text" class="form-control mb-1" value="{{$users->surname}}" required>
+                                        <input name="surname" type="text" class="form-control mb-1" value="{{$user->surname}}" required>
                                     </div>
 
                                     <div class="form-group">
                                         <label class="form-label">Kullanıcı Adı</label>
-                                        <input name="nickname" type="text" class="form-control mb-1" value="{{$users->nickname}}" required>
+                                        <input name="nickname" type="text" class="form-control mb-1" value="{{$user->nickname}}" required>
                                     </div>
 
                                     <div class="form-group">
                                         <label class="form-label">E-Posta Adresi</label>
-                                        <input name="email" type="text" class="form-control mb-1" value="{{$users->email}}" required>
+                                        <input name="email" type="text" class="form-control mb-1" value="{{$user->email}}" required>
                                     </div>
 
                                     @foreach ($errors->all() as $error)

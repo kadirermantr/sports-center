@@ -2,29 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Blog;
 use App\Models\Gym;
-use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
     public function __construct()
     {
         //$this->middleware('auth');
     }
-
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
 
     public function index()
     {
@@ -42,17 +29,6 @@ class HomeController extends Controller
         return view('classes');
     }
 
-    public function blog()
-    {
-        $blogs = Blog::all();
-        return  view('blog', compact('blogs'));
-    }
-
-    public function blogDetails()
-    {
-        return view('blog-details');
-    }
-
     public function gallery()
     {
         return view('gallery');
@@ -61,5 +37,15 @@ class HomeController extends Controller
     public function contact()
     {
         return view('contact');
+    }
+
+    public function membership()
+    {
+        return view('membership-agreement');
+    }
+
+    public function privacy()
+    {
+        return view('privacy-policy');
     }
 }

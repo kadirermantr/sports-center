@@ -22,6 +22,7 @@ class CreateGymsTable extends Migration
             $table->integer('capacity');
             $table->string('work_days');
             $table->string('work_hours');
+            $table->smallInteger('status')->default(0);
             $table->bigInteger('created_by')->unsigned();
             $table->timestamps();
             $table->softDeletes();

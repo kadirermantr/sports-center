@@ -9,16 +9,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Sports Center</title>
 
-    <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
-    <!-- Css Styles -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
-    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
-    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="css/style.css" type="text/css">
-    <link rel="stylesheet" href="css/navbar.css" type="text/css">
+    <link rel="stylesheet" href="{{ URL::asset('css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('css/magnific-popup.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('css/slicknav.min.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('css/navbar.css') }}">
 </head>
 
 <body>
@@ -38,7 +36,6 @@
             <a href="{{ url('/')}}" class="nav-item nav-link {{ Route::is('index') ? 'active' : '' }}">Anasayfa</a>
             <a href="{{ url('/hakkimizda')}}" class="nav-item nav-link {{ Route::is('about-us') ? 'active' : '' }}">Hakkımızda</a>
             <a href="{{ url('/salonlar')}}" class="nav-item nav-link {{ Route::is('gyms') ? 'active' : '' }}">Salonlar</a>
-            <a href="{{ url('/blog')}}" class="nav-item nav-link {{ Route::is('blog') ? 'active' : '' }}">Blog</a>
             <a href="{{ url('/galeri')}}" class="nav-item nav-link {{ Route::is('gallery') ? 'active' : '' }}">Galeri</a>
             <a href="{{ url('/iletisim')}}" class="nav-item nav-link {{ Route::is('contact') ? 'active' : '' }}">İletişim</a>
         </div>
@@ -58,8 +55,15 @@
                         </button>
 
                         <div class="dropdown-menu">
+                            @if(Auth::user()->role == 'admin')
+                                <a href="{{ url('/admin')}}" class="dropdown-item">Yönetici Paneli</a>
+                            @endif
+
                             <a href="{{ url('/account')}}" class="dropdown-item">Hesabım</a>
-                            <a href="{{ url('/gym-register')}}" class="dropdown-item">Spor Salonu</a>
+
+                            @if(Auth::user()->applications > 0)
+                                <a href="{{ url('/my-applications')}}" class="dropdown-item">Başvurularım</a>
+                            @endif
 
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="{{ route('logout') }}"
