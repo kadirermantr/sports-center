@@ -18,16 +18,6 @@ class AdminController extends Controller
         return view('auth.admin.general', compact('member', 'application', 'gym'));
     }
 
-    public function create()
-    {
-
-    }
-
-    public function show()
-    {
-
-    }
-
     public function update(Request $request, User $user)
     {
         $request->validate([
@@ -50,7 +40,8 @@ class AdminController extends Controller
         Gym::first()->delete();
         Gym::withTrashed()->first()->restore();
 
-        return back();
+        return redirect()->route('deleted.users')
+            ->with('message', 'Kullanıcı silindi.');
     }
 
     public function users()
@@ -68,12 +59,6 @@ class AdminController extends Controller
     public function deletedUsers()
     {
         $users = User::onlyTrashed()->paginate(10);
-        return view('auth.admin.deleted-users', compact('users'));
-    }
-
-    public function undeleteUsers(User $user, $id)
-    {
-        $users = User::onlyTrashed()->get();
         return view('auth.admin.deleted-users', compact('users'));
     }
 
@@ -99,6 +84,12 @@ class AdminController extends Controller
     {
         $applications = Application::onlyTrashed()->paginate(10);
         return view('auth.admin.deleted-applications', compact('applications'));
+    }
+
+    public function deletedGyms()
+    {
+        $gyms = Gym::onlyTrashed()->paginate(10);
+        return view('auth.admin.deleted-gyms', compact('gyms'));
     }
 
     public function accept(Application $application, $id)
@@ -131,7 +122,8 @@ class AdminController extends Controller
             'created_by' => $created_by,
         ]);
 
-        return back();
+        return redirect()->route('admin.approved-applications')
+            ->with('message', 'Başvuru onaylandı.');
     }
 
     public function reject(Application $application, $id)

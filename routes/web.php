@@ -64,11 +64,11 @@ Route::group(['middleware' => 'admin'], function (){
     Route::get('/admin', [AdminController::class, 'index'])->name('admin.general');
     Route::get('/admin/users', [AdminController::class, 'users'])->name('admin.users');
     Route::get('/admin/deleted-users', [AdminController::class, 'deletedUsers'])->name('deleted.users');
-    Route::get('/admin-undelete/{id}', [AdminController::class, 'undeleteUsers']) ->name('undelete.users');
     Route::get('/admin/applications', [AdminController::class, 'applications'])->name('admin.applications');
     Route::get('/admin/approved-applications', [AdminController::class, 'approvedApplications'])->name('admin.approved-applications');
     Route::get('/admin/rejected-applications', [AdminController::class, 'rejectedApplications'])->name('admin.rejected-applications');
     Route::get('/admin/deleted-applications', [AdminController::class, 'deletedApplications'])->name('admin.deleted-applications');
+    Route::get('/admin/deleted-gyms', [AdminController::class, 'deletedGyms'])->name('admin.deleted-gyms');
     Route::get('/admin/gyms', [AdminController::class, 'gyms'])->name('admin.gyms');
     Route::get('/delete-user/{id}', [AdminController::class, 'destroy']) ->name('delete.user')->where(array('id' => '[0-9]+'));
     Route::post('/update-user/{id}', [AdminController::class, 'update']) ->name('update.user');

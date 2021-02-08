@@ -53,7 +53,14 @@
                                         <td>{{$application->name}}</td>
                                         <td>{{$application->get_City->name}}</td>
                                         <td>{{$application->get_District->name}}</td>
-                                        <td>{{$application->capacity}}</td>
+
+                                        @if($application->capacity == 1)
+                                            <td>0-50</td>
+                                        @elseif($application->capacity == 2)
+                                            <td>50-100</td>
+                                        @else
+                                            <td>100+</td>
+                                        @endif
                                     </tr>
                                 @endforeach
                                 </tbody>
@@ -66,6 +73,12 @@
                             </div>
 
                             <br />
+
+                            @if(session()->has('message'))
+                                <div class="alert alert-danger">
+                                    {{ session()->get('message') }}
+                                </div>
+                            @endif
 
                         </div>
                     </div>

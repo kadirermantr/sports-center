@@ -33,14 +33,6 @@
                 <div class="col-md-9">
                     <div class="tab-content">
                         <div class="tab-pane fade active show account-text">
-                            <p>
-                                Lorem ipsum proin gravida nibh vel velit auctor aliquet. Aenean pretium
-                                sollicitudin, nascetur auci elit consequat ipsutissem niuis sed odio sit amet nibh vulputate
-                                cursus a amet.
-                            </p>
-
-                            <br />
-
                             @if(($user_count == 0))
                                 Hiç üye yok!
 

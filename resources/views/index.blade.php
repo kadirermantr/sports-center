@@ -113,62 +113,26 @@
             </div>
         </div>
         <div class="row classes-slider owl-carousel">
-            <div class="col-lg-4">
-                <div class="single-class-item set-bg" data-setbg="img/classes/classes-1.jpg">
-                    <div class="si-text">
-                        <h4>Yoga</h4>
-                        <span><i class="fa fa-user"></i> Ryan Knight</span>
+            @foreach($gyms as $gym)
+                @if($gym->status == 1)
+                    <div class="col-lg-4 col-md-6">
+                        <a href="/salon/{{$gym->id}}">
+                            <div class="single-class-item set-bg" data-setbg="uploads/gyms_images/{{$gym->photo}}">
+                                <div class="si-text">
+                                    <h4>{{$gym->name}}</h4>
+                                    <span><i class="fa fa-home"></i> {{$gym->get_City->name}} - {{$gym->get_District->name}}</span>
+                                </div>
+                            </div>
+                        </a>
                     </div>
+                @endif
+            @endforeach
+
+            @if($gyms == null)
+                <div class="alert alert-danger">
+                    Spor salonu bulunamadı!
                 </div>
-                <div class="single-class-item set-bg" data-setbg="img/classes/classes-4.jpg">
-                    <div class="si-text">
-                        <h4>Karate</h4>
-                        <span><i class="fa fa-user"></i> Kevin McCormick</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="single-class-item set-bg" data-setbg="img/classes/classes-2.jpg">
-                    <div class="si-text">
-                        <h4>Running</h4>
-                        <span><i class="fa fa-user"></i> Randy Rivera</span>
-                    </div>
-                </div>
-                <div class="single-class-item set-bg" data-setbg="img/classes/classes-5.jpg">
-                    <div class="si-text">
-                        <h4>Dance</h4>
-                        <span><i class="fa fa-user"></i> Russell Lane</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="single-class-item set-bg" data-setbg="img/classes/classes-3.jpg">
-                    <div class="si-text">
-                        <h4>Personal Training</h4>
-                        <span><i class="fa fa-user"></i> Cole Robertson</span>
-                    </div>
-                </div>
-                <div class="single-class-item set-bg" data-setbg="img/classes/classes-6.jpg">
-                    <div class="si-text">
-                        <h4>Weight Loss</h4>
-                        <span><i class="fa fa-user"></i> Ryan Scott</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="single-class-item set-bg" data-setbg="img/classes/classes-7.jpg">
-                    <div class="si-text">
-                        <h4>Personal Training</h4>
-                        <span><i class="fa fa-user"></i> Cole Robertson</span>
-                    </div>
-                </div>
-                <div class="single-class-item set-bg" data-setbg="img/classes/classes-8.jpg">
-                    <div class="si-text">
-                        <h4>Weight Loss</h4>
-                        <span><i class="fa fa-user"></i> Ryan Scott</span>
-                    </div>
-                </div>
-            </div>
+            @endif
         </div>
     </div>
 </section>

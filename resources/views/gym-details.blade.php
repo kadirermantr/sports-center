@@ -7,7 +7,6 @@
             <div class="col-lg-12">
                 <div class="bd-hero-text">
                     <h2>{{$gym->name}}</h2>
-                    <span>{{$gym->get_City->name}} - {{$gym->get_District->name}}</span>
                 </div>
             </div>
         </div>
@@ -23,14 +22,48 @@
             <div class="col-lg-10 offset-lg-1">
                 <div class="bd-text">
                     <div class="bd-title">
-                        <p>Your clients would like to see optimal results for minimal work. For this reason, it can
-                            be difficult to convince them that a website redesign enhances SEO strategies. However,
-                            if you try to redesign a site without taking SEO into account, you are going to face
-                            bigger problems down the road.</p>
-                        <p>Start off by explaining to clients what will happen if you ignore SEO in your redesign.
-                            Explain to them how a website redesign enhances SEO strategies across the board. A
-                            redesign is essential and should be part of your client’s budget. There are a couple of
-                            risks to point out.</p>
+                        <p>
+                            <strong>Şehir:</strong> {{$gym->get_City->name}}
+                        </p>
+                        <p>
+                            <strong>İlçe:</strong> {{$gym->get_District->name}}
+                        </p>
+
+                        <p>
+                            <strong>Kapasitesi:</strong>
+
+                            @if($gym->capacity == 1)
+                                0-50
+                            @elseif($gym->capacity == 2)
+                               50-100
+                            @else
+                                100+
+                            @endif
+                        </p>
+
+                        <p>
+                            <strong>Çalışma günleri:</strong>
+
+                            @if($gym->work_days == 1)
+                                Her gün
+                            @elseif($gym->work_days == 2)
+                               Hafta içi her gün
+                            @else
+                                Pazartesi-Cumartesi
+                            @endif
+                        </p>
+
+                        <p>
+                            <strong>Çalışma saatleri:</strong>
+
+                            @if($gym->work_hours == 1)
+                                10:00 - 18:00
+                            @elseif($gym->work_hours == 2)
+                                10:00 - 19:00
+                            @else
+                                10:00 - 20:00
+                            @endif
+                        </p>
                     </div>
                     <div class="bd-pic">
                         <div class="row">
@@ -45,9 +78,6 @@
 
                     <div class="tag-share">
                         <div class="tags">
-                            <a href="#">Camera</a>
-                            <a href="#">Photography</a>
-                            <a href="#">Tips</a>
                         </div>
                         <div class="social-share">
                             <span>Paylaş:</span>
@@ -65,14 +95,8 @@
                             </div>
                             <div class="col-lg-9">
                                 <div class="ba-text">
-                                    <h5>Shane Lynch</h5>
-                                    <p>Aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                                        voluptate velit esse cillum bore et dolore magna aliqua. </p>
-                                    <div class="bt-social">
-                                        <a href="#"><i class="fa fa-instagram"></i></a>
-                                        <a href="#"><i class="fa fa-facebook"></i></a>
-                                        <a href="#"><i class="fa fa-twitter"></i></a>
-                                    </div>
+                                    <h5>{{$gym->user[0]->name}} {{$gym->user[0]->surname}}</h5>
+                                    <h6><a href="mailto:{{$gym->user[0]->email}}">{{$gym->user[0]->email}}</a></h6>
                                 </div>
                             </div>
                         </div>

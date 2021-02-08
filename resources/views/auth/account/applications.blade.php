@@ -23,7 +23,7 @@
             <div class="row no-gutters row-bordered row-border-light">
                 <div class="col-md-3 pt-0">
                     <div class="list-group list-group-flush account-settings-links">
-                        <a class="list-group-item list-group-item-action active " href="/account">Genel</a>
+                        <a class="list-group-item list-group-item-action" href="/account">Genel</a>
                         <a class="list-group-item list-group-item-action" href="/change-password">Parolayı Değiştir</a>
                         <a class="list-group-item list-group-item-action" href="/delete-account">Hesabı Sil</a>
                     </div>

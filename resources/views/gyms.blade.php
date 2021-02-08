@@ -29,6 +29,7 @@
                 <div class="col-lg-3">
                     <select class="form-control" id="city-dropdown" required name="city_id">
                         <option value=" ">{{$selected}}</option>
+                        <option value=" ">Tüm şehirler</option>
                         @foreach ($cities as $city)
                             <option value="{{$city->id}}" name="city_id">
                                 {{$city->name}}

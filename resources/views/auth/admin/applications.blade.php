@@ -56,7 +56,15 @@
                                         <td>{{$application->name}}</td>
                                         <td>{{$application->get_City->name}}</td>
                                         <td>{{$application->get_District->name}}</td>
-                                        <td>{{$application->capacity}}</td>
+
+                                        @if($application->capacity == 1)
+                                            <td>0-50</td>
+                                        @elseif($application->capacity == 2)
+                                            <td>50-100</td>
+                                        @else
+                                            <td>100+</td>
+                                        @endif
+
                                         <td><a href="{{route('accept.application', $application->id)}}"><i class="fa fa-check"></i></a></td>
                                         <td><a href="{{route('reject.application', $application->id)}}"><i class="fa fa-times"></i></a></td>
                                         <td><a href="{{route('delete.application', $application->id)}}"><i class="fa fa-trash"></i></a></td>

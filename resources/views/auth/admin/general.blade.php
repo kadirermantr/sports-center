@@ -44,7 +44,7 @@
                 <div class="row">
                     <div class="col-lg-4 col-sm-6">
                         <div class="circle-tile ">
-                            <a href="#"><div class="circle-tile-heading dark-blue"><i class="fa fa-users fa-fw fa-3x"></i></div></a>
+                            <a href="/admin/users"><div class="circle-tile-heading dark-blue"><i class="fa fa-users fa-fw fa-3x"></i></div></a>
                             <div class="circle-tile-content dark-blue">
                                 <div class="circle-tile-description text-faded"> Üyeler</div>
                                 <div class="circle-tile-number text-faded ">{{$member}}</div>
@@ -55,7 +55,7 @@
 
                     <div class="col-lg-4 col-sm-6">
                         <div class="circle-tile ">
-                            <a href="#"><div class="circle-tile-heading red"><i class="fa fa-building fa-fw fa-3x"></i></div></a>
+                            <a href="/admin/applications"><div class="circle-tile-heading red"><i class="fa fa-building fa-fw fa-3x"></i></div></a>
                             <div class="circle-tile-content red">
                                 <div class="circle-tile-description text-faded"> Başvurular </div>
                                 <div class="circle-tile-number text-faded ">{{$application}}</div>
@@ -66,7 +66,7 @@
 
                     <div class="col-lg-4 col-sm-6">
                         <div class="circle-tile ">
-                            <a href="#"><div class="circle-tile-heading dark-gray "><i class="fa fa-envelope fa-fw fa-3x"></i></div></a>
+                            <a href="/admin/gyms"><div class="circle-tile-heading dark-gray "><i class="fa fa-envelope fa-fw fa-3x"></i></div></a>
                             <div class="circle-tile-content dark-gray">
                                 <div class="circle-tile-description text-faded"> Spor Salonları </div>
                                 <div class="circle-tile-number text-faded ">{{$gym}}</div>

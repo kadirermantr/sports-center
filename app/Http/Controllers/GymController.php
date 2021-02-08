@@ -18,9 +18,9 @@ class GymController extends Controller
         $city_id = $request->get('city_id');
 
         if ($city_id == null) {
-            $gyms = Gym::paginate(12);
+            $gyms = Gym::all();
             $cities = City::get(["name","id"]);
-            $selected = 'Tüm şehirler';
+            $selected = 'Şehir seçiniz';
 
             return view('gyms', compact('gyms', 'cities', 'selected'));
         }
@@ -87,7 +87,9 @@ class GymController extends Controller
     public function destroy(Gym $gym, $id)
     {
         Gym::findOrFail($id)->delete();
-        return back();
+
+        return redirect()->route('admin.deleted-gyms')
+            ->with('message', 'Spor salonu silindi.');
     }
 
 }

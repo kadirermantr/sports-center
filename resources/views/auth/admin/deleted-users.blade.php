@@ -33,13 +33,6 @@
                 <div class="col-md-9">
                     <div class="tab-content">
                         <div class="tab-pane fade active show account-text">
-                            <p>
-                                Lorem ipsum proin gravida nibh vel velit auctor aliquet. Aenean pretium
-                                sollicitudin, nascetur auci elit consequat ipsutissem niuis sed odio sit amet nibh vulputate
-                                cursus a amet.
-                            </p>
-
-                            <br />
                             <table class="table table-striped">
                                 <thead>
                                 <tr>
@@ -49,8 +42,6 @@
                                     <th scope="col">Kullanıcı Adı</th>
                                     <th scope="col">E-Posta</th>
                                     <th scope="col">Rol</th>
-                                    <th scope="col"></th>
-                                    <th scope="col"></th>
                                 </tr>
                                 </thead>
 
@@ -63,11 +54,6 @@
                                         <td>{{$user->nickname}}</td>
                                         <td><a href="mailto:{{$user->email}}">{{$user->email}}</a></td>
                                         <td>{{$user->role}}</td>
-                                        <td><a href="{{route('admins.update', $user->id)}}" data-toggle="modal" data-target="#exampleModalCenter">
-                                            <i class="fa fa-edit"></i>
-                                        </a></td>
-
-                                        <td><a href="{{route('undelete.users', $user->id)}}"><i class="fa fa-undo"></i></a></td>
                                     </tr>
                                 @endforeach
                                 </tbody>
@@ -80,6 +66,12 @@
                             </div>
 
                             <br />
+
+                            @if(session()->has('message'))
+                                <div class="alert alert-danger">
+                                    {{ session()->get('message') }}
+                                </div>
+                            @endif
                         </div>
 
                         </div>
