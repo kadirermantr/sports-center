@@ -58,7 +58,7 @@ Full tech stack [here](/techstack.md)
 # Tech Stack File
 ![](https://img.stackshare.io/repo.svg "repo") [kadirermantr/sports-center](https://github.com/kadirermantr/sports-center)![](https://img.stackshare.io/public_badge.svg "public")
 <br/><br/>
-|35<br/>Tools used|12/17/23 <br/>Report generated|
+|36<br/>Tools used|01/05/24 <br/>Report generated|
 |------|------|
 </div>
 
@@ -261,7 +261,7 @@ Full tech stack [here](/techstack.md)
 </table>
 
 
-## <img src='https://img.stackshare.io/group.svg' /> Open source packages (14)</h2>
+## <img src='https://img.stackshare.io/group.svg' /> Open source packages (15)</h2>
 
 ## <img width='24' height='24' src='https://img.stackshare.io/package_manager/1778/default_90cb8b66e85ae5b95928b10bb076ab6a27c7e151.png'/> Packagist (10)
 
@@ -279,11 +279,12 @@ Full tech stack [here](/techstack.md)
 |[phpunit/phpunit](https://packagist.org/phpunit/phpunit)|v9.5.0|01/08/21|vagrant |N/A|N/A|
 
 
-## <img width='24' height='24' src='https://img.stackshare.io/service/1120/lejvzrnlpb308aftn31u.png'/> npm (4)
+## <img width='24' height='24' src='https://img.stackshare.io/service/1120/lejvzrnlpb308aftn31u.png'/> npm (5)
 
 |NAME|VERSION|LAST UPDATED|LAST UPDATED BY|LICENSE|VULNERABILITIES|
 |:------|:------|:------|:------|:------|:------|
 |[cross-env](https://www.npmjs.com/cross-env)|v7.0.3|01/08/21|vagrant |MIT|N/A|
+|[laravel-mix](https://www.npmjs.com/laravel-mix)|v5.0.9|01/08/21|vagrant |MIT|N/A|
 |[popper.js](https://www.npmjs.com/popper.js)|v1.16.1|01/08/21|vagrant |MIT|N/A|
 |[resolve-url-loader](https://www.npmjs.com/resolve-url-loader)|v3.1.2|01/08/21|vagrant |MIT|N/A|
 |[sass-loader](https://www.npmjs.com/sass-loader)|v8.0.2|01/08/21|vagrant |MIT|N/A|
