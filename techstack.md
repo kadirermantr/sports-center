@@ -3,24 +3,24 @@
 ## Tech Stack
 kadirermantr/sports-center is built on the following main stack:
 
-- [Google App Engine](https://developers.google.com/appengine) – Platform as a Service
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) – Languages
 - [PHP](http://www.php.net/) – Languages
+- [Bootstrap](http://getbootstrap.com/) – Front-End Frameworks
+- [Guzzle](http://guzzlephp.org/) – Microframeworks (Backend)
 - [Laravel](http://laravel.com/) – Frameworks (Full Stack)
+- [Sass](http://sass-lang.com/) – CSS Pre-processors / Extensions
 - [jQuery](http://jquery.com/) – Javascript UI Libraries
+- [Cloud DB for Mysql](https://www.ncloud.com/product/database/cloudDbMysql) – SQL Database as a Service
+- [Memcached](http://memcached.org/) – Databases
 - [MySQL](http://www.mysql.com) – Databases
 - [Redis](http://redis.io/) – In-Memory Databases
-- [Memcached](http://memcached.org/) – Databases
-- [Bootstrap](http://getbootstrap.com/) – Front-End Frameworks
-- [Sass](http://sass-lang.com/) – CSS Pre-processors / Extensions
-- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) – Languages
+- [pgvector](https://github.com/pgvector/pgvector/) – Database Tools
 - [PHPUnit](https://phpunit.de/) – Testing Frameworks
-- [Guzzle](http://guzzlephp.org/) – Microframeworks (Backend)
+- [Google App Engine](https://developers.google.com/appengine) – Platform as a Service
+- [Alpine Linux](https://www.alpinelinux.org/) – Operating Systems
+- [LangChain](https://github.com/hwchase17/langchain) – Large Language Model Tools
 - [Lodash](https://lodash.com) – Javascript Utilities & Libraries
 - [axios](https://github.com/mzabriskie/axios) – Javascript Utilities & Libraries
-- [Alpine Linux](https://www.alpinelinux.org/) – Operating Systems
-- [Cloud DB for Mysql](https://www.ncloud.com/product/database/cloudDbMysql) – SQL Database as a Service
-- [LangChain](https://github.com/hwchase17/langchain) – Large Language Model Tools
-- [pgvector](https://github.com/pgvector/pgvector/) – Database Tools
 
 Full tech stack [here](/techstack.md)
 
@@ -30,24 +30,24 @@ Full tech stack [here](/techstack.md)
 ## Tech Stack
 kadirermantr/sports-center is built on the following main stack:
 
-- <img width='25' height='25' src='https://img.stackshare.io/service/139/s01TMTGn.png' alt='Google App Engine'/> [Google App Engine](https://developers.google.com/appengine) – Platform as a Service
+- <img width='25' height='25' src='https://img.stackshare.io/service/1209/javascript.jpeg' alt='JavaScript'/> [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) – Languages
 - <img width='25' height='25' src='https://img.stackshare.io/service/991/hwUcGZ41_400x400.jpg' alt='PHP'/> [PHP](http://www.php.net/) – Languages
+- <img width='25' height='25' src='https://img.stackshare.io/service/1101/C9QJ7V3X.png' alt='Bootstrap'/> [Bootstrap](http://getbootstrap.com/) – Front-End Frameworks
+- <img width='25' height='25' src='https://img.stackshare.io/service/2350/638632.png' alt='Guzzle'/> [Guzzle](http://guzzlephp.org/) – Microframeworks (Backend)
 - <img width='25' height='25' src='https://img.stackshare.io/service/992/AcA2LnWL_400x400.jpg' alt='Laravel'/> [Laravel](http://laravel.com/) – Frameworks (Full Stack)
+- <img width='25' height='25' src='https://img.stackshare.io/service/1171/jCR2zNJV.png' alt='Sass'/> [Sass](http://sass-lang.com/) – CSS Pre-processors / Extensions
 - <img width='25' height='25' src='https://img.stackshare.io/service/1021/lxEKmMnB_400x400.jpg' alt='jQuery'/> [jQuery](http://jquery.com/) – Javascript UI Libraries
+- <img width='25' height='25' src='https://img.stackshare.io/service/21275/default_078eb0ae2b56280a937ed073a3ba4332291f9ba8.png' alt='Cloud DB for Mysql'/> [Cloud DB for Mysql](https://www.ncloud.com/product/database/cloudDbMysql) – SQL Database as a Service
+- <img width='25' height='25' src='https://img.stackshare.io/service/1040/hDNnpa4a_400x400.jpg' alt='Memcached'/> [Memcached](http://memcached.org/) – Databases
 - <img width='25' height='25' src='https://img.stackshare.io/service/1025/logo-mysql-170x170.png' alt='MySQL'/> [MySQL](http://www.mysql.com) – Databases
 - <img width='25' height='25' src='https://img.stackshare.io/service/1031/default_cbce472cd134adc6688572f999e9122b9657d4ba.png' alt='Redis'/> [Redis](http://redis.io/) – In-Memory Databases
-- <img width='25' height='25' src='https://img.stackshare.io/service/1040/hDNnpa4a_400x400.jpg' alt='Memcached'/> [Memcached](http://memcached.org/) – Databases
-- <img width='25' height='25' src='https://img.stackshare.io/service/1101/C9QJ7V3X.png' alt='Bootstrap'/> [Bootstrap](http://getbootstrap.com/) – Front-End Frameworks
-- <img width='25' height='25' src='https://img.stackshare.io/service/1171/jCR2zNJV.png' alt='Sass'/> [Sass](http://sass-lang.com/) – CSS Pre-processors / Extensions
-- <img width='25' height='25' src='https://img.stackshare.io/service/1209/javascript.jpeg' alt='JavaScript'/> [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) – Languages
+- <img width='25' height='25' src='https://img.stackshare.io/service/109221/default_b888cdf5617d936aa6aacf130911906955508639.png' alt='pgvector'/> [pgvector](https://github.com/pgvector/pgvector/) – Database Tools
 - <img width='25' height='25' src='https://img.stackshare.io/service/1616/1_WsEnddd5Y4EgEHsT054kUQ.jpeg' alt='PHPUnit'/> [PHPUnit](https://phpunit.de/) – Testing Frameworks
-- <img width='25' height='25' src='https://img.stackshare.io/service/2350/638632.png' alt='Guzzle'/> [Guzzle](http://guzzlephp.org/) – Microframeworks (Backend)
+- <img width='25' height='25' src='https://img.stackshare.io/service/139/s01TMTGn.png' alt='Google App Engine'/> [Google App Engine](https://developers.google.com/appengine) – Platform as a Service
+- <img width='25' height='25' src='https://img.stackshare.io/service/6429/alpine_linux.png' alt='Alpine Linux'/> [Alpine Linux](https://www.alpinelinux.org/) – Operating Systems
+- <img width='25' height='25' src='https://img.stackshare.io/service/48790/default_5b6c6b73f1ff3775c85d2a1ba954cb87e30cbf13.jpg' alt='LangChain'/> [LangChain](https://github.com/hwchase17/langchain) – Large Language Model Tools
 - <img width='25' height='25' src='https://img.stackshare.io/service/2438/lodash.png' alt='Lodash'/> [Lodash](https://lodash.com) – Javascript Utilities & Libraries
 - <img width='25' height='25' src='https://img.stackshare.io/no-img-open-source.png' alt='axios'/> [axios](https://github.com/mzabriskie/axios) – Javascript Utilities & Libraries
-- <img width='25' height='25' src='https://img.stackshare.io/service/6429/alpine_linux.png' alt='Alpine Linux'/> [Alpine Linux](https://www.alpinelinux.org/) – Operating Systems
-- <img width='25' height='25' src='https://img.stackshare.io/service/21275/default_078eb0ae2b56280a937ed073a3ba4332291f9ba8.png' alt='Cloud DB for Mysql'/> [Cloud DB for Mysql](https://www.ncloud.com/product/database/cloudDbMysql) – SQL Database as a Service
-- <img width='25' height='25' src='https://img.stackshare.io/service/48790/default_5b6c6b73f1ff3775c85d2a1ba954cb87e30cbf13.jpg' alt='LangChain'/> [LangChain](https://github.com/hwchase17/langchain) – Large Language Model Tools
-- <img width='25' height='25' src='https://img.stackshare.io/service/109221/default_b888cdf5617d936aa6aacf130911906955508639.png' alt='pgvector'/> [pgvector](https://github.com/pgvector/pgvector/) – Database Tools
 
 Full tech stack [here](/techstack.md)
 
@@ -58,7 +58,7 @@ Full tech stack [here](/techstack.md)
 # Tech Stack File
 ![](https://img.stackshare.io/repo.svg "repo") [kadirermantr/sports-center](https://github.com/kadirermantr/sports-center)![](https://img.stackshare.io/public_badge.svg "public")
 <br/><br/>
-|36<br/>Tools used|01/05/24 <br/>Report generated|
+|36<br/>Tools used|02/29/24 <br/>Report generated|
 |------|------|
 </div>
 
